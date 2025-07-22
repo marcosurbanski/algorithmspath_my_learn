@@ -24,7 +24,8 @@ algorithms/
 ├── trees/
 │   ├── binary_search_tree.py
 │   └── test_binary_search_tree.py
-...
+```
+
 
 Setup
 
