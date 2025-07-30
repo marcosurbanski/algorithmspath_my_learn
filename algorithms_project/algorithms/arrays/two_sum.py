@@ -1,8 +1,3 @@
-def two_sum(nums: list[int], target: int) -> list[int]:
-    seen = {}
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in seen:
-            return [seen[complement], i]
-        seen[num] = i
-    return []
+class Problem1:
+	def twoSum(self, A: List[int], k: int) -> List[int]:
+		pass
