@@ -16,13 +16,20 @@ class Numsolution(object):
 
         counter[nums[0]] = 1
 
-        while r < len(nums) -1:            
+        while r < len(nums) -1:  
+            r += 1          
             print(nums[r])
-            for keyr in nums[r]:
-                for keyl in nums[r]:
-                    if keyr == keyl and abs(keyr - keyl) <= k :
+            for r in nums:
+                print(r)
+                for l in nums:
+                    print(l)
+                    l += 1
+                    if nums[r] == nums[l] and abs(nums[r] - nums[l]) <= k :
+                        print(f'Os valores de R: {nums[r]} e L: {nums[l]}')
                         index_validator = True
-                        return index_validator        
+                        return index_validator 
+                    
+                     
         return False
 
 
