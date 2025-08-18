@@ -6,32 +6,17 @@ class Numsolution(object):
         :rtype: bool
         """
 
-        l, r = 0, 0
-        _max = 1
-        counter = {}
-        index_validator = None
+        i = 0 
 
-        print(nums)
-        print(len(nums))
-
-        counter[nums[0]] = 1
-
-        while r < len(nums) -1:  
-            r += 1          
-            print(nums[r])
-            for r in nums:
-                print(r)
-                for l in nums:
-                    print(l)
-                    l += 1
-                    if nums[r] == nums[l] and abs(nums[r] - nums[l]) <= k :
-                        print(f'Os valores de R: {nums[r]} e L: {nums[l]}')
-                        index_validator = True
-                        return index_validator 
-                    
-                     
+        while i < len(nums):
+            j = i + 1
+            while j <= i + k and j < len(nums):
+                print(f'Comparando nums[{i}] = {nums[i]} com nums[{j}] = {nums[j]}')
+                if nums[i] == nums[j]:
+                    return True
+                j += 1
+            i += 1
         return False
-
 
 numsolution = Numsolution()
 print(numsolution.containnumsNearbyDuplicate([1,2,3,1], 3))
