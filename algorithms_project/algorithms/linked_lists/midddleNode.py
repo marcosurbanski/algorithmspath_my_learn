@@ -6,7 +6,7 @@ from ListNode import ListNode, create_linked_list, print_linked_list
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution(object):
+class Solution():
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
         :type head: Optional[ListNode]
@@ -17,3 +17,11 @@ class Solution(object):
             ahead = ahead.next.next
             head = head.next
         return head
+
+
+middle_node = Solution()
+head = create_linked_list([1,2,3,4,5])
+
+middle_node = middle_node.middleNode(head)
+
+print_linked_list(middle_node)
