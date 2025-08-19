@@ -7,6 +7,7 @@ class array:
         for x in self.array_data:
             print(f"valor {x}")
 
+
 if __name__ == "__main__":
     numbers = [10, 20, 30]
     new_array = array(numbers)

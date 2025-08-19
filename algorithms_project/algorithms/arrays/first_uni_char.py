@@ -1,7 +1,7 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         d = {}
-        for idx,ch in enumerate(s):
+        for idx, ch in enumerate(s):
             if not d.get(ch):
                 d[ch] = [idx, 1]
             else:
