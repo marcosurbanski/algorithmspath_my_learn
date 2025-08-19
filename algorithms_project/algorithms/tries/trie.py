@@ -3,10 +3,11 @@ class TrieNode:
         self.children = {}
         self.is_end_of_word = False
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-    
+
     def insert(self, word):
         current_node = self.root
         print(f"Inserindo a palavra: {word}")
@@ -39,14 +40,12 @@ class Trie:
         return True
 
 
-
-
 trie = Trie()
 
 trie.insert("apple")
 
-#trie.insert("banana")
-#trie.insert("app")
-#trie.insert("orange")
+# trie.insert("banana")
+# trie.insert("app")
+# trie.insert("orange")
 
-#print(trie.search("apple"))
+# print(trie.search("apple"))

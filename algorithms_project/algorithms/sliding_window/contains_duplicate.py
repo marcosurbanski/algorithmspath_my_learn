@@ -6,7 +6,7 @@ class Numsolution(object):
         :rtype: bool
         """
 
-        i = 0 
+        i = 0
 
         while i < len(nums):
             j = i + 1
@@ -18,5 +18,6 @@ class Numsolution(object):
             i += 1
         return False
 
+
 numsolution = Numsolution()
-print(numsolution.containnumsNearbyDuplicate([1,2,3,1], 3))
+print(numsolution.containnumsNearbyDuplicate([1, 2, 3, 1], 3))

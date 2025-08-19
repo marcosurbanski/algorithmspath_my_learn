@@ -18,7 +18,7 @@ lógica principal (intituitiva):
 -O complemento atual é o valor que falta para atingir o target.
     Para cada número num em nums, calculamos:
         complemento = target - num
-        
+
 verifica no dicionario se este valor ja foi visto antes.
     num + complemento = target
 """
@@ -41,12 +41,9 @@ class Solution(object):
 
         return [-1, -1]
 
+
 solutions = Solution()
-a = [2,7,11,15]
+a = [2, 7, 11, 15]
 target = 17
 
 print(solutions.twoSum(a, target))
-
-
-
-
