@@ -7,8 +7,9 @@ def worker(queue):
     while not queue.empty():
         task = queue.get()
         print(f"{threading.current_thread().name} processing: {task}")
-        time.sleep(1) #process simulation
+        time.sleep(1)  # process simulation
         queue.task_done()
+
 
 # Queue tasks
 tasks = queue.Queue()
@@ -25,5 +26,5 @@ for _ in range(2):
     t.start()
 
 
-tasks.join() # Wait for all tasks to be processed
+tasks.join()  # Wait for all tasks to be processed
 print("All the tasks are done")

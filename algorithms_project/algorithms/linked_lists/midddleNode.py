@@ -6,6 +6,8 @@ from ListNode import ListNode, create_linked_list, print_linked_list
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+
 class Solution():
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
@@ -26,11 +28,12 @@ class Solution():
             head = head.next
         return head
 
+
 # Criamos um objeto da  classe Solution
 middle_node = Solution()
 
 # Criamos uma lista
-head = create_linked_list([1,2,3,4,5])
+head = create_linked_list([1, 2, 3, 4, 5])
 
 # Chamamos a função para encontrar o meio
 middle_node = middle_node.middleNode(head)
