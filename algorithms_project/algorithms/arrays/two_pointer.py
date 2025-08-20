@@ -1,18 +1,18 @@
 class Solution:
-    def reverseWords_manual(s):
+    def reverseWords_manual(string_word):
         res = ''
-        left, r = 0, 0
+        left, right = 0, 0
 
-        while r < len(s):
-            if s[r] != ' ':
-                r += 1
+        while right < len(string_word):
+            if string_word[right] != ' ':
+                right += 1
             else:
-                res += s[left:r+1][::-1]
-                r += 1
-                left = r
+                res += string_word[left:right+1][::-1]
+                right += 1
+                left = right
 
         res += ' '
-        res += s[left:r + 2][::-1]
+        res += string_word[left:right + 2][::-1]
         return res[1:]
 
 
@@ -32,10 +32,10 @@ print(reverseword)
 class Solution3:
     def reverseWords_manual1(s):
         res = ''
-        for r in range(len(s) + 1):
-            if r == len(s) or s[r] == ' ':
-                res += s[:r][::-1]
-                if r < len(s):
+        for right in range(len(s) + 1):
+            if right == len(s) or s[right] == ' ':
+                res += s[:right][::-1]
+                if right < len(s):
                     res += ' '
         return res
 
