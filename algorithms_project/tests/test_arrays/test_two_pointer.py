@@ -1,4 +1,11 @@
-from algorithms_project.algorithms.arrays.two_pointer import *
+import pytest
+from algorithms.arrays.two_pointer import Solution
 
-def solution_one():
-    assert Solution().reverseWords_manual("rac tar") == "car rat"
+
+@pytest.mark.parametrize("input_str,expected", [
+    ("rac tar", "car rat"),
+    ("Hello World", "olleH dlroW"),
+    ("Python", "nohtyP"),
+])
+def test_reverse_words(input_str, expected):
+    assert Solution.reverseWords_manual(input_str) == expected
