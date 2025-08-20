@@ -1,5 +1,5 @@
-from algorithms.arrays.two_pointer import Solution2
+from algorithms.arrays.two_pointer import Solution
 
 
 def solution_one():
-    assert Solution2().reverseWords_manual("rac tar") == "car rat"
+    assert Solution.reverseWords_manual("rac tar") == "car rat"
