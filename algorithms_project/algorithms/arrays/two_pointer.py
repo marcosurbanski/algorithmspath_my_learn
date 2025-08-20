@@ -30,13 +30,15 @@ print(reverseword)
 
 
 class Solution3:
-    def reverseWords_manual1(s):
+    def reverseWords_manual1(sword: str) -> str:
         res = ''
-        for right in range(len(s) + 1):
-            if right == len(s) or s[right] == ' ':
-                res += s[:right][::-1]
-                if right < len(s):
+        left = 0
+        for right in range(len(sword) + 1):
+            if right == len(sword) or sword[right] == ' ':
+                res += sword[left:right][::-1]
+                if right < len(sword):
                     res += ' '
+                left = right + 1
         return res
 
 
