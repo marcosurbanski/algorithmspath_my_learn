@@ -17,6 +17,7 @@ def test_reverse_words(input_str, expected):
 def test_reverse_words1(input_str, expected):
     assert Solution2.reverserWords(input_str) == expected
 
+
 @pytest.mark.parametrize("input_str,expected", [
     ("Let's take LeetCode contest", "s'teL ekat edoCteeL tsetnoc"),
 ])

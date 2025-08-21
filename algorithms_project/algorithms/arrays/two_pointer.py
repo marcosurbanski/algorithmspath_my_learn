@@ -1,7 +1,7 @@
 class Solution:
     def reverseWords_manual(string_word):
         res = ''  # Para realizar o reverse da string cria-se uma substring
-        left, right = 0, 0  # Inici-ase os ponteiros left e right em zero 
+        left, right = 0, 0  # Inici-ase os ponteiros left e right em zero
 
         while right < len(string_word):  # loop dentro do tamanho da string
             if string_word[right] != ' ':  # enquanto a posição de right dentro da string for diferente de espaço em branco
@@ -11,9 +11,9 @@ class Solution:
                 right += 1  # incrementa +1 no right para sair do espaço vazio e iniciar a leitura da proxima palavra
                 left = right
 
-        res += ' ' # pula um espaço na substring para acrescentar a proxima palavra
+        res += ' '  # pula um espaço na substring para acrescentar a proxima palavra
         res += string_word[left:right + 2][::-1]  # adicina a proxima palavra na substring acrescenta o 2porque saiu fora do loop acima e reverte
-        return res[1:] # começa da posição 1 devido ter um espaço em branco no começo 
+        return res[1:]  # começa da posição 1 devido ter um espaço em branco no começo
 
 
 cat = Solution.reverseWords_manual("rac tar")
@@ -22,7 +22,7 @@ print(cat)
 
 class Solution2:
     def reverserWords(s):
-        return ' '.join(word[::-1] for word in s.split())  # utilizando modulo pronto da linguagem para resolver 
+        return ' '.join(word[::-1] for word in s.split())  # utilizando modulo pronto da linguagem para resolver
 
 
 reverseword = Solution2.reverserWords("I evol edocteel")

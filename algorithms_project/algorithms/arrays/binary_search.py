@@ -1,30 +1,17 @@
 class Binary:
-    def binary_search(nums,  n):
+    def binary_search(nums,  target):
         low = 0
-        high = len(nums)
+        high = len(nums) - 1
         steps = 0
 
-        while low < high:
+        while low <= high:
             steps += 1
-            mid = int((low + high)/2)
+            mid = (low + high) // 2
 
-            if nums[mid] == n:
-                print("step: ",  steps)
-                return mid
-            elif nums[mid] < n:
-                low = mid+1
+            if nums[mid] == target:
+                return steps
+            elif nums[mid] < target:
+                low = mid + 1
             else:
-                high = mid
+                high = mid - 1
         return -1
-
-
-a = [1, 2, 3, 4, 5]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
-
-binary = Binary
-binary.binary_search(a,  3)
-binary.binary_search(b,  3)
-binary.binary_search(c,  3)
-binary.binary_search(d,  3)
