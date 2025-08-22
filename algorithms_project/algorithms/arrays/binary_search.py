@@ -1,30 +1,26 @@
 class Binary:
-    def binary_search(nums,  n):
-        low = 0
-        high = len(nums)
-        steps = 0
+    @staticmethod
+    def binary_search(nums, target):
+        """
+        Perform a binary search on a sorted list / Realiza uma busca binária em uma lista ordenada.
+        Args:
+            nums (list): A sorted list of numbers / Uma lista ordenada de números
+            target (int): The value to search for / O valor a ser procurado
+        Returns:
+            int: Steps to find target, or -1 if not found / Passos para encontrar o alvo, ou -1 se não encontrado
+        """
 
-        while low < high:
-            steps += 1
-            mid = int((low + high)/2)
+        low = 0  # Starting index / Índice inicial
+        high = len(nums) - 1  # Ending index / Índice final
+        steps = 0  # Step counter / Contador de passos
 
-            if nums[mid] == n:
-                print("step: ",  steps)
-                return mid
-            elif nums[mid] < n:
-                low = mid+1
-            else:
-                high = mid
-        return -1
-
-
-a = [1, 2, 3, 4, 5]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
-
-binary = Binary
-binary.binary_search(a,  3)
-binary.binary_search(b,  3)
-binary.binary_search(c,  3)
-binary.binary_search(d,  3)
+        while low <= high:  # While range is valid / Enquanto o intervalo for válido
+            steps += 1  # Count step / Conta o passo
+            mid = (low + high) // 2  # Middle index / Índice do meio
+            if nums[mid] == target:  # Target found / Alvo encontrado
+                return steps  # Return steps / Retorna passos
+            elif nums[mid] < target:  # Middle smaller than target / Meio menor que alvo
+                low = mid + 1  # Search right / Busca à direita
+            else:  # Middle larger than target / Meio maior que alvo
+                high = mid - 1  # Search left / Busca à esquerda
+        return -1  # Target not found / Alvo não encontrado
