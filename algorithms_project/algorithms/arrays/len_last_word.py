@@ -18,4 +18,13 @@ class Solution():
         words.append(string_word[left:right])
         
         return len(words[-1])
-            
+
+
+class Solution2():
+    def lengthOfLastWord(self, string_word: str) -> int:
+        """
+        :type s: str
+        :rtype: int
+        """        
+        words = string_word.split()
+        return len(words[-1])
