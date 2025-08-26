@@ -1,5 +1,5 @@
 import pytest
-from algorithms.arrays.exponential_search import Solution
+from algorithms_project.algorithms.arrays.exponential_search import Solution, ArrayReader
 
 
 @pytest.mark.parametrize("array,target,expected", [
@@ -9,4 +9,12 @@ from algorithms.arrays.exponential_search import Solution
       36, 37, 38, 39, 40], 14, 13),
 ])
 def test_exponential_search(array, target, expected):
+    assert Solution().exponencial_search(array, target) == expected
+
+@pytest.mark.parametrize("array,target,expected", [
+    ([-1, 0, 3, 5, 9, 12], 9, 4),
+    ([-1, 0, 3, 5, 9, 12], 2, -1),
+])
+def test_exponential_search_unknown_size(array, target, expected):
+    reader = ArrayReader(array)
     assert Solution().exponencial_search(array, target) == expected
