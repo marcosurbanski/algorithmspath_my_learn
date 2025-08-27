@@ -1,5 +1,5 @@
 import pytest
-from algorithms_project.algorithms.arrays.first_uni_char import Solution
+from algorithms_project.algorithms.hashing.first_uni_char import Solution
 
 
 st = "leetcode"
