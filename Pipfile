@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pytest = "*"
 pytest-django = "*"
+numpy = "*"
+qiskit = "*"
 
 [dev-packages]
 flake8 = "*"

@@ -10,6 +10,7 @@ Objetivo:
   muito grande caso o índice acessado esteja fora do limite.
 """
 
+
 # Simula o ArrayReader do LeetCode
 class ArrayReader:
     def __init__(self, arr):
@@ -105,3 +106,4 @@ class Solution1():
 
         # Target não encontrado
         return -1
+
