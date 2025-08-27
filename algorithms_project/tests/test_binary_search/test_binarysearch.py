@@ -1,5 +1,5 @@
 import pytest
-from algorithms.arrays.binary_search import Binary
+from algorithms_project.algorithms.binary_search.binary_search import Binary
 
 
 @pytest.mark.parametrize("array,target,expected", [

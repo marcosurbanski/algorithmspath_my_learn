@@ -1,5 +1,5 @@
 import pytest
-from algorithms_project.algorithms.arrays.exponential_search import Solution, ArrayReader
+from algorithms_project.algorithms.binary_search.exponential_search import Solution, ArrayReader
 
 
 @pytest.mark.parametrize("array,target,expected", [
