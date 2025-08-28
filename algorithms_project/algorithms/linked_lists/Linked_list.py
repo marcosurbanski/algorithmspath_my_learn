@@ -58,6 +58,13 @@ class DoublyLinkedList:
             current = current.next
         return items
 
+    def current_tail(self):
+        # Cria um novo nó
+        if not self.head:                       # Se a lista estiver vazia
+            return None
+        else:
+            return self.head
+
 
 dll = DoublyLinkedList()
 
@@ -74,6 +81,6 @@ dll.add_to_end(5)     # Lista: [1, 2, 3, 4, 5]
 print(dll.to_list())  # 👉 [1, 2, 3, 4, 5]
 
 print(dll.remove_from_front())  # 👉 remove 1
-print(dll.remove_fron_end())    # 👉 remove 5
+print(dll.remove_from_end())    # 👉 remove 5
 
 print(dll.to_list())  # 👉 [2, 3, 4]

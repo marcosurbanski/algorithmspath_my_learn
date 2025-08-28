@@ -1,4 +1,15 @@
 """
+1. Two Sum
+
+HashMap:
+
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+
 Encontra dois indices em 'nums' cuja soma seja 'target'.
 
 
@@ -31,14 +42,19 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        num_dict = {}
+        num_dict = {}  # dicionário para armazenar {valor: índice}
 
-        for i, num in enumerate(nums):
-            complemento = target - num
+        for i, num in enumerate(nums):  # percorre cada número da lista com seu índice
+            complemento = target - num  # calcula o número que falta para atingir o target
+
             if complemento in num_dict:
+                # Se o complemento já foi visto antes, encontramos a resposta
                 return [num_dict[complemento], i]
+
+            # Caso contrário, guardamos o número atual no dicionário
             num_dict[num] = i
 
+        # Só por segurança (no LeetCode sempre existe solução)
         return [-1, -1]
 
 
