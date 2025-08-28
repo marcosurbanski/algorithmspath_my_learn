@@ -1,5 +1,5 @@
 import pytest
-from algorithms_project.algorithms.binary_search.exponential_search import Solution, ArrayReader
+from algorithms_project.algorithms.binary_search.exponential_search import Solution
 
 
 @pytest.mark.parametrize("array,target,expected", [
@@ -11,10 +11,10 @@ from algorithms_project.algorithms.binary_search.exponential_search import Solut
 def test_exponential_search(array, target, expected):
     assert Solution().exponencial_search(array, target) == expected
 
+
 @pytest.mark.parametrize("array,target,expected", [
     ([-1, 0, 3, 5, 9, 12], 9, 4),
     ([-1, 0, 3, 5, 9, 12], 2, -1),
 ])
 def test_exponential_search_unknown_size(array, target, expected):
-    reader = ArrayReader(array)
     assert Solution().exponencial_search(array, target) == expected

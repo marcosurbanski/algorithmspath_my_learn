@@ -2,10 +2,13 @@ import pytest
 from algorithms_project.algorithms.linked_lists.Linked_list import DoublyLinkedList
 
 
-n = 3
+@pytest.mark.parametrize("values,expected", [
+    ([3], [3]),
+    ([1, 2, 3], [3, 2, 1]),
 
-@pytest.mark.parametrize("n,expected", [
-    (n, DoublyLinkedList().current_tail()),
 ])
-def test_contains_duplicated(n,expected):
-    assert DoublyLinkedList().add_to_front(n) == expected
+def test_add_to_front(values, expected):
+    dll = DoublyLinkedList()
+    for v in values:
+        dll.add_to_front(v)
+    assert dll.to_list() == expected

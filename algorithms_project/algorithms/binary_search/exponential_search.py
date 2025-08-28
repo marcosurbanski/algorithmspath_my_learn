@@ -22,7 +22,7 @@ class ArrayReader:
         if 0 <= index < len(self.arr):
             return self.arr[index]
         # Caso contrário, retorna um valor muito grande (simulando índice fora do array)
-        return 2**31 -1
+        return 2**31 - 1
 
 
 # Implementação de Exponential Search com acesso direto ao array
@@ -79,13 +79,13 @@ class Solution1():
         # Caso base: verifica o primeiro elemento
         if reader.get(0) == target:
             return 0
-        
+
         # 1) Busca exponencial para encontrar o intervalo
         i = 1
         while reader.get(i) < target:
             # Dobrar o índice até encontrar valor >= target
             i *= 2
-        
+
         # 2) Busca binária dentro do intervalo [i//2, i]
         low, high = i // 2, i
         while low <= high:
@@ -106,4 +106,3 @@ class Solution1():
 
         # Target não encontrado
         return -1
-

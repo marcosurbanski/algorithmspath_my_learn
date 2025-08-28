@@ -57,9 +57,9 @@ class DoublyLinkedList:
             items.append(current.value)         # percorre do começo até o fim
             current = current.next
         return items
-    
+
     def current_tail(self):
-                   # Cria um novo nó
+        # Cria um novo nó
         if not self.head:                       # Se a lista estiver vazia
             return None
         else:

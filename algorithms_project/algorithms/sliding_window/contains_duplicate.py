@@ -1,8 +1,8 @@
 """
-Sliding Window 
+Sliding Window
 219. Contains Duplicate II
 
-Given an integer array nums and an integer k, 
+Given an integer array nums and an integer k,
 return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
 
 """
@@ -13,7 +13,7 @@ class Numsolution(object):
         """
         Verifica se existe algum par de elementos duplicados na lista 'nums'
         tal que os índices desses elementos estejam a no máximo 'k' posições de distância.
-        
+
         :type nums: List[int]
         :type k: int
         :rtype: bool
@@ -29,19 +29,20 @@ class Numsolution(object):
             while j <= i + k and j < len(nums):
                 # Imprime quais elementos estão sendo comparados (útil para depuração)
                 print(f'Comparando nums[{i}] = {nums[i]} com nums[{j}] = {nums[j]}')
-                
+
                 # Se encontrar duplicata dentro da janela de tamanho k, retorna True
                 if nums[i] == nums[j]:
                     return True
-                
+
                 # Avança o segundo índice
                 j += 1
-            
+
             # Avança o primeiro índice
             i += 1
-        
+
         # Se percorreu toda a lista e não encontrou duplicatas próximas, retorna False
         return False
+
 
 class Solution():
     def containsnumsNearbyDuplicate2(self, nums, k):
@@ -59,4 +60,4 @@ class Solution():
                 else:
                     # Como j só aumenta, se a diferença já passou de k, não precisa continuar
                     break
-        return False                        
+        return False
