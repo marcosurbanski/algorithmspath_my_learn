@@ -1,5 +1,5 @@
 import pytest
-from algorithms_project.algorithms.binary_search.exponential_search import Solution
+from algorithms.binary_search.exponential_search import Solution
 
 
 @pytest.mark.parametrize("array,target,expected", [

@@ -1,5 +1,5 @@
 import pytest
-from algorithms_project.algorithms.sliding_window.contains_duplicate import Numsolution, Solution
+from algorithms.sliding_window.contains_duplicate import Numsolution, Solution
 
 
 array = [1, 2, 3, 1]
